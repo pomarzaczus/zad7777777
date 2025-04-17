@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:zad7777777.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="zad7777777.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+	<StackPanel>
+		<Border Margin="5" CornerRadius="10" Background="LightBlue">
+			<TextBlock Margin="5"
+                       FontSize="24"
+                       HorizontalAlignment="Center"
+                       Text="sequancuer">
+			</TextBlock>
+		</Border>
+	 
+		<Grid ShowGridLines="True"  Margin="5" 
+      ColumnDefinitions="120, 100" 
+      RowDefinitions="Auto, Auto, Auto,Auto">
+    <Label Grid.Row="0" Grid.Column="0" Margin="10">sekwencja</Label>
+    <TextBox Grid.Row="0" Name="rna" Grid.Column="1" Margin="0 5" Text="0"/>
+	<Label Grid.Row="2" Grid.Column="0" Margin="10">krutkas</Label>
+	<TextBox Grid.Row="2" Name="trna" Grid.Column="1" Margin="0 5" Text="0"/>
+	<Button Grid.Row="4"  Click="Button_OnClick" Grid.Column="1">Calculate</Button>
+			
+    </Grid>
+		<TextBlock Opacity="0" Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		<TextBlock Margin="5"
+						   FontSize="24"
+						   HorizontalAlignment="Center"
+				   Name="wynik"
+						   Text="sequancuer">
+		</TextBlock>
+	</StackPanel>
+  
+	
+</UserControl>
