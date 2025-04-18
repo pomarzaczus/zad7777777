@@ -25,18 +25,32 @@
       RowDefinitions="Auto, Auto, Auto,Auto">
     <Label Grid.Row="0" Grid.Column="0" Margin="10">sekwencja</Label>
     <TextBox Grid.Row="0" Name="rna" Grid.Column="1" Margin="0 5" Text="0"/>
-	<Label Grid.Row="2" Grid.Column="0" Margin="10">krutkas</Label>
-	<TextBox Grid.Row="2" Name="trna" Grid.Column="1" Margin="0 5" Text="0"/>
+
+
 	<Button Grid.Row="4"  Click="Button_OnClick" Grid.Column="1">Calculate</Button>
 			
     </Grid>
 		<TextBlock Opacity="0" Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<TextBlock Margin="5"
-						   FontSize="24"
-						   HorizontalAlignment="Center"
-				   Name="wynik"
-						   Text="sequancuer">
-		</TextBlock>
+		
+		
+			
+			
+			<Grid Width="200" >
+				<ScrollViewer MaxHeight="400"  
+							  Width="200" 
+							  HorizontalScrollBarVisibility="Auto"
+							  VerticalScrollBarVisibility="Auto">
+					 <TextBlock Text="" 
+								Name="wynik"
+								TextWrapping="Wrap" />
+				</ScrollViewer>
+					
+				
+			</Grid>
+			
+		
+		
+		
 	</StackPanel>
   
 	
